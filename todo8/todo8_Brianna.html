@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11732,14 +11732,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11809,8 +11809,8 @@ What would be super interesting would be to try and do this analysis during the 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># consumer keys, redacted in submission</span>
-<span class="n">consumerKey</span> <span class="o">=</span> <span class="s1">&#39;leFqaCyjj4nWVdxjiTyjIPWUX&#39;</span>
-<span class="n">consumerSecret</span> <span class="o">=</span> <span class="s1">&#39;ZZaU4R9ldWFVtwgNzKeoSkIZ6thJA6GcwFOj2H7WufH8qQDGVy&#39;</span>
+<span class="n">consumerKey</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXX&#39;</span>
+<span class="n">consumerSecret</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXX&#39;</span>
 
 <span class="c1"># create authentication using tweepy</span>
 <span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="o">=</span><span class="n">consumerKey</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumerSecret</span><span class="p">)</span>
@@ -11908,9 +11908,9 @@ What would be super interesting would be to try and do this analysis during the 
 
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetText&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetRetweetCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweet_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetRetweetCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweet_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetFavoriteCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorite_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetFavoriteCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorite_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetSource&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">source</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;tweetCreated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">created_at</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
@@ -11918,18 +11918,18 @@ What would be super interesting would be to try and do this analysis during the 
 
 
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userScreen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userScreen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userCreateDt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">created_at</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userCreateDt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">created_at</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userDesc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">description</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userFollowerCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">followers_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userFollowerCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">followers_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userFriendsCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">friends_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userFriendsCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">friends_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userLocation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">location</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userTimezone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">time_zone</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">DataSet</span><span class="p">[</span><span class="s1">&#39;userTimezone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">time_zone</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">DataSet</span>
@@ -12346,29 +12346,29 @@ Name: tweetLang, dtype: int64</pre>
 
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetText&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    
+
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetFavorite&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorite</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetFaved&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorited</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetFavoriteCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorite_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetFavoriteCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">favorite_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    
+
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetRT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweet</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetRTed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweeted</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetRetweetCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweet_count</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetRetweetCt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweet_count</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetRTs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">retweets</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    
+
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetSource&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">source</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetCreated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">created_at</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;tweetLang&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">lang</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
 
 
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userScreen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userScreen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
     <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userLocation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">location</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
-    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userTimezone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">time_zone</span> <span class="k">for</span> <span class="n">tweet</span> 
+    <span class="n">rtDF</span><span class="p">[</span><span class="s1">&#39;userTimezone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">time_zone</span> <span class="k">for</span> <span class="n">tweet</span>
     <span class="ow">in</span> <span class="n">tweets</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">rtDF</span>
@@ -13284,7 +13284,7 @@ Name: tweetText, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
 </div>
@@ -13296,7 +13296,7 @@ Name: tweetText, dtype: int64</pre>
   </div>
 </body>
 
- 
+
 
 
 </html>
